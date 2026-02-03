@@ -15,7 +15,7 @@
 
 <img width="2564" height="1536" alt="Gemini_Generated_Image_7urlyp7urlyp7url" src="https://github.com/user-attachments/assets/b018204f-a95b-4f39-a104-1fda4432462f" />
 
-`SpaceMV-ScAI` is a constellation intelligent management platform developed by Chengdu Tianxun Microsatellite Technology Co., Ltd., designed to address the operational control complexity challenges brought by the rapid expansion of constellation scale in the commercial aerospace sector.
+[SpaceMV-ScAI](https://github.com/tianxunweixiao/SpaceMV-ScAI/tree/main) is a constellation intelligent management platform developed by Chengdu Tianxun Microsatellite Technology Co., Ltd., designed to address the operational control complexity challenges brought by the rapid expansion of constellation scale in the commercial aerospace sector.
 
 The platform adopts an Agent-oriented architecture design. The current open-source version focuses on building a high-precision orbit simulation calculation engine and data interaction foundation. It currently supports all-weather, all-region target area coverage simulation and resource scheduling for optical remote sensing satellites, laying a solid computing and data foundation for the future introduction of intelligent agents for automated task orchestration.
 
