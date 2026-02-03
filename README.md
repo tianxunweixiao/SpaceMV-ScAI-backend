@@ -225,6 +225,9 @@ pm2 start start_project.config.js
 # 查看服务状态  
 pm2 list
 ```
+
+ScAI 客户端仓库可参考[ScAI-frontend](https://github.com/tianxunweixiao/ScAI-frontend)
+
 ## **📚 API 文档**
 
 服务启动成功后，可访问自动生成的交互式文档：
