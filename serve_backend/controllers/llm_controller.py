@@ -7,9 +7,20 @@ router = APIRouter(tags=["llm"])
 
 class LLMRequest(BaseModel):
     """Model for LLM request"""
-    model: str
     inputs: str
-    context: Dict[str, Any] = {}
+    model_name: str
+
+@router.get("/ollama/models")
+async def get_ollama_models() -> Dict[str, Any]:
+    """
+    Get available models from Ollama
+    
+    Returns:
+        Dict containing models list
+    """
+    from services.llm_service import LLMService
+    service = LLMService()
+    return await service.get_models()
 
 '''
 @router.post("/generate_stream")

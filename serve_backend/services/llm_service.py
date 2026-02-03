@@ -8,7 +8,30 @@ from configs.app_config import app_config
 class LLMService:
     """Service for LLM-related operations"""
     
- 
+    async def get_models(self) -> Dict[str, Any]:
+        """
+        Get available models from Ollama
+        
+        Returns:
+            Dict containing models list
+        """
+        ollama_base_url = app_config.OLLAMA_URL.replace('/api/chat', '')
+        models_url = f"{ollama_base_url}/api/tags"
+        
+        headers = {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+        
+        try:
+            async with httpx.AsyncClient(timeout=30.0) as client:
+                response = await client.get(models_url, headers=headers)
+                response.raise_for_status()
+                return response.json()
+        except httpx.HTTPError as e:
+            logging.error(f"Error fetching models from Ollama: {e}")
+            return {"models": []}
+    
     def chat_ollama(self, request_data: Dict[str, Any]):
         """
         Process LLM chat request (ollama API)
@@ -21,7 +44,7 @@ class LLMService:
         """
         body = request_data
         
-        model_name = body['model']
+        model_name = body['model_name']
         
         headers = {
             "Accept": "application/json",
