@@ -224,6 +224,9 @@ pm2 start start_project.config.js
 # View service status  
 pm2 list
 ```
+
+The ScAI client repository can be referenced at [ScAI-frontend](https://github.com/tianxunweixiao/ScAI-frontend).
+
 ## **📚 API Documentation**
 
 After services start successfully, you can access the automatically generated interactive documentation:
