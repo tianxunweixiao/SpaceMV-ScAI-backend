@@ -1,6 +1,17 @@
 # **ScAI Backend: 天巡星座仿真与综合管理平台服务端**
+<div align="center">
 
-**ScAI** 是由成都天巡微小卫星科技有限公司研发的一款星座仿真和综合管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/tianxunweixiao/ScAI-Backend)
+
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![ClickHouse](https://img.shields.io/badge/Database-ClickHouse-FFCC00?logo=clickhouse&logoColor=black)](https://clickhouse.com/)
+[![Streamlit](https://img.shields.io/badge/Visual-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+
+</div>
+ScAI是由成都天巡微小卫星科技有限公司研发的一款星座仿真和综合管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
 
 平台采用面向 **Agent** 的架构设计，当前开源版本聚焦于构建高精度的轨道仿真计算引擎与数据交互底座。目前已支持光学遥感卫星全天候、全地域的目标区域覆盖仿真与资源调度，为未来引入智能体进行自动化任务编排奠定了坚实的算力与数据基础。
 
@@ -65,19 +76,19 @@ ScAI Backend/
 ├── requirements.txt          \# 项目依赖  
 └── .env.example              \# 环境配置示例文件
 
-### **技术栈**
+### 技术栈
 
 | 领域 | 技术选型 | 说明 |
-| :---- | :---- | :---- |
+| :--- | :--- | :--- |
 | **后端框架** | **FastAPI** | 高性能异步 Web 框架 |
-|  | **Uvicorn** | ASGI 服务器 |
-|  | **Pydantic** | 数据验证与配置管理 |
-| **数据库** | **ClickHouse** | OLAP 数据库，用于存储海量卫星、星座及用户数据 |
+| | **Uvicorn** | ASGI 服务器 |
+| | **Pydantic** | 数据验证与配置管理 |
+| **数据库** | **ClickHouse** | 存储海量卫星、星座和用户数据 |
 | **可视化** | **Streamlit** | 快速构建数据应用 |
-|  | **Plotly** | 交互式图表绘制 |
+| | **Plotly** | 交互式图表绘制 |
 | **工具组件** | **Paramiko** | SSH 客户端，用于远程 STK 调用 |
-|  | **APScheduler** | 定时任务调度 |
-|  | **STK Engine** | 卫星工具包（需单独授权） |
+| | **APScheduler** | 定时任务调度 |
+| | **STK Engine** | 卫星工具包（需单独授权） |
 
 ### **数据流向**
 
@@ -131,20 +142,20 @@ graph TD
 * 已配置好 **STK agi 包** 的 Python 环境
 
 ### **1\. 环境准备**
+```bash
+# 克隆仓库  
+git clone   
+cd ScAI-backend
 
-\# 克隆仓库  
-git clone \[https://github.com/your-repo/ScAI-Backend.git\](https://github.com/your-repo/ScAI-Backend.git)  
-cd ScAI-Backend
-
-\# 创建并激活 Conda 环境  
+# 创建并激活 Conda 环境  
 conda create \-n scai python=3.12  
 conda activate scai
 
 \# 安装依赖  
 pip install \-r requirements.txt
-
+```
 ### **2\. 初始化数据库**
-
+```bash
 启动 ClickHouse 容器并运行同步脚本以初始化表结构和基础数据：
 
 \# 启动 ClickHouse  
@@ -162,9 +173,9 @@ docker run \-d \\
 
 \# 初始化数据  
 python timer.py
-
+```
 ### **3\. 环境变量配置**
-
+```bash
 复制示例文件并修改配置：
 
 cp .env.example .env
@@ -193,9 +204,9 @@ STK\_SCRIPT\_LOCAL\_PATH=D:\\Path\\To\\stk\_simulation.py
 
 \# LLM配置(暂时仅支持ollama框架)  
 OLLAMA\_URL=http://your\_ollama\_host:11434/api/chat
-
+```
 ### **4\. 启动服务**
-
+```bash
 本项目使用 PM2 进行进程管理：
 
 \# 安装 pm2  
@@ -206,7 +217,7 @@ pm2 start start\_project.config.js
 
 \# 查看服务状态  
 pm2 list
-
+```
 ## **📚 API 文档**
 
 服务启动成功后，可访问自动生成的交互式文档：
@@ -263,3 +274,11 @@ limitations under the License.
 
 * **Email**: code@spacemv.com  
 * **Issues**: [GitHub Issues](https://www.google.com/search?q=https://github.com/your-repo/issues)
+
+## ✅ 待办事项
+
+- [ ] **开源前端代码**: 发布配套的 ScAI Frontend 仓库，实现完整的 B/S 架构演示。
+- [ ] **引入智能体 (Agent)**: 集成 AI Agent 进行自动化的星座仿真任务编排与调度。
+- [ ] **多星座支持**: 增加对导航星座、通信星座的预设支持。
+- [ ] **STK 接口增强**: 拓展 API 覆盖范围，支持更细粒度的仿真参数配置
+- [ ] **完善文档**: 补充详细的视频教程和 API 接口用例。
