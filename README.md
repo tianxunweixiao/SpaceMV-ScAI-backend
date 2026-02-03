@@ -1,9 +1,9 @@
-# **ScAI Backend: 天巡星座仿真与综合管理平台服务端**
+# **SpaceMV-ScAI Backend: 星座智能管理平台服务端**
 <div align="center">
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/tianxunweixiao/ScAI-Backend)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/tianxunweixiao/SpaceMV-ScAI-Backend)
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![ClickHouse](https://img.shields.io/badge/Database-ClickHouse-FFCC00?logo=clickhouse&logoColor=black)](https://clickhouse.com/)
@@ -15,11 +15,11 @@
 
 <img width="2564" height="1536" alt="Gemini_Generated_Image_7urlyp7urlyp7url" src="https://github.com/user-attachments/assets/b018204f-a95b-4f39-a104-1fda4432462f" />
 
-`ScAI`是由成都天巡微小卫星科技有限责任公司研发的一款星座仿真和综合管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
+`SpaceMV-ScAI`是由成都天巡微小卫星科技有限责任公司研发的一款星座智能管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
 
 平台采用面向Agent的架构设计，当前开源版本聚焦于构建高精度的轨道仿真计算引擎与数据交互底座。目前已支持光学遥感卫星全天候、全地域的目标区域覆盖仿真与资源调度，为未来引入智能体进行自动化任务编排奠定了坚实的算力与数据基础。
 
-`ScAI Backend`作为平台的核心服务端组件，承载了用户请求处理、仿真任务执行、可视化服务支撑、数据存储管理及 API 接口分发等关键职能。
+`SpaceMV-ScAI Backend`作为平台的核心服务端组件，承载了用户请求处理、仿真任务执行、可视化服务支撑、数据存储管理及 API 接口分发等关键职能。
 
 ## **📖 目录**
 
@@ -36,7 +36,7 @@
 
 ## **🧩 核心模块**
 
-ScAI Backend 由以下四大核心模块组成：
+Space-MV ScAI Backend 由以下四大核心模块组成：
 
 | 模块 | 目录 | 说明 |
 | :---- | :---- | :---- |
@@ -49,7 +49,7 @@ ScAI Backend 由以下四大核心模块组成：
 
 ### **目录结构**
 
-ScAI Backend/  
+Space-MV ScAI Backend/  
 ├── account\_backend/          \# 🔐 账户管理服务  
 │   ├── app.py                \# FastAPI 应用入口  
 │   ├── configs/              \# 配置管理  
@@ -149,8 +149,8 @@ graph TD
 ### **1. 环境准备**
 ```bash
 # 克隆仓库  
-git clone https://github.com/tianxunweixiao/ScAI-backend.git   
-cd ScAI-backend
+git clone https://github.com/tianxunweixiao/SpaceMV-ScAI-backend.git   
+cd SpaceMV-ScAI-backend
 
 # 创建并激活 Conda 环境  
 conda create -n scai python=3.12  
@@ -226,7 +226,7 @@ pm2 start start_project.config.js
 pm2 list
 ```
 
-ScAI 客户端仓库可参考[ScAI-frontend](https://github.com/tianxunweixiao/ScAI-frontend)
+SpaceMV-ScAI 客户端仓库可参考[SpaceMV-ScAI-frontend](https://github.com/tianxunweixiao/SpaceMV-ScAI-frontend)
 
 ## **📚 API 文档**
 
@@ -245,7 +245,7 @@ ScAI 客户端仓库可参考[ScAI-frontend](https://github.com/tianxunweixiao/S
 
 ## **🤝 贡献指南**
 
-我们非常欢迎社区开发者参与 ScAI Backend 的建设！如果您有任何改进建议或发现了 Bug，请遵循以下流程：
+我们非常欢迎社区开发者参与 SpaceMV-ScAI Backend 的建设！如果您有任何改进建议或发现了 Bug，请遵循以下流程：
 
 1. **Fork 本仓库**：点击右上角的 Fork 按钮将项目复制到您的 GitHub 账户。  
 2. **创建分支**：从 main 分支切出一个新分支用于开发。  
@@ -276,7 +276,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 如有任何问题、建议或商务合作需求，请联系项目维护团队。
 
 * **Email**: code@spacemv.com  
-* **Issues**: [GitHub Issues](https://github.com/tianxunweixiao/ScAI-backend/issues)
+* **Issues**: [GitHub Issues](https://github.com/tianxunweixiao/SpaceMV-ScAI-backend/issues)
 
 更多信息可关注公司微信公众号：
 
@@ -285,7 +285,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## ✅ 待办事项
 
-- [√] **开源前端代码**: 发布配套的 ScAI Frontend 仓库，实现完整的 B/S 架构演示。
+- [√] **开源前端代码**: 发布配套的 SpaceMV-ScAI-Frontend 仓库，实现完整的 B/S 架构演示。
 - [ ] **引入智能体 (Agent)**: 集成 AI Agent 进行自动化的星座仿真任务编排与调度。
 - [ ] **多星座支持**: 增加对导航星座、通信星座的预设支持。
 - [ ] **STK 接口增强**: 拓展 API 覆盖范围，支持更细粒度的仿真参数配置
