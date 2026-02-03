@@ -281,7 +281,7 @@ For more information, follow the company's WeChat official account:
 
 ## ✅ To-Do List
 
-- [ ] **Open Source Frontend Code**: Release the companion ScAI Frontend repository to implement a complete B/S architecture demonstration.
+- [√] **Open Source Frontend Code**: Release the companion ScAI Frontend repository to implement a complete B/S architecture demonstration.
 - [ ] **Introduce Intelligent Agents (Agent)**: Integrate AI Agents for automated constellation simulation task orchestration and scheduling.
 - [ ] **Multi-Constellation Support**: Add preset support for navigation constellations and communication constellations.
 - [ ] **STK Interface Enhancement**: Expand API coverage to support more fine-grained simulation parameter configuration
