@@ -282,7 +282,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## ✅ 待办事项
 
-- [ ] **开源前端代码**: 发布配套的 ScAI Frontend 仓库，实现完整的 B/S 架构演示。
+- [√] **开源前端代码**: 发布配套的 ScAI Frontend 仓库，实现完整的 B/S 架构演示。
 - [ ] **引入智能体 (Agent)**: 集成 AI Agent 进行自动化的星座仿真任务编排与调度。
 - [ ] **多星座支持**: 增加对导航星座、通信星座的预设支持。
 - [ ] **STK 接口增强**: 拓展 API 覆盖范围，支持更细粒度的仿真参数配置
