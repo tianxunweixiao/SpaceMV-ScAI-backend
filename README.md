@@ -15,7 +15,7 @@
 
 <img width="2564" height="1536" alt="Gemini_Generated_Image_7urlyp7urlyp7url" src="https://github.com/user-attachments/assets/b018204f-a95b-4f39-a104-1fda4432462f" />
 
-`SpaceMV-ScAI`是由成都天巡微小卫星科技有限责任公司研发的一款星座智能管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
+[SpaceMV-ScAI](https://github.com/tianxunweixiao/SpaceMV-ScAI/tree/main)是由成都天巡微小卫星科技有限责任公司研发的一款星座智能管理平台，旨在解决当前商业航天领域星座规模急剧扩大带来的运控复杂性难题。
 
 平台采用面向Agent的架构设计，当前开源版本聚焦于构建高精度的轨道仿真计算引擎与数据交互底座。目前已支持光学遥感卫星全天候、全地域的目标区域覆盖仿真与资源调度，为未来引入智能体进行自动化任务编排奠定了坚实的算力与数据基础。
 
